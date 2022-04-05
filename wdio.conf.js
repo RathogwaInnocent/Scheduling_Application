@@ -19,9 +19,8 @@ exports.config = {
     // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
-    specs: [
-        './test/specs/**/*.js'
-    ],
+   // specs: ['./tests/login.spec.js'],
+   specs: ['./tests/*.spec.js'],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -42,7 +41,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -53,7 +52,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 1,
         //
         browserName: 'chrome',
         // If outputDir is provided WebdriverIO can capture driver session logs
@@ -92,7 +91,8 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+   //baseUrl: 'http://localhost',
+     baseUrl: 'http://127.0.0.1:5500/superHeroApp/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
