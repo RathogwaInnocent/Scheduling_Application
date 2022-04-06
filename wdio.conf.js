@@ -9,7 +9,8 @@ exports.config = {
     runner: 'local',
     //
     // Override default path ('/wd/hub') for chromedriver service.
-    path: '/',
+    //path: '/',
+    path: '/wd/hub',
     //
     // ==================
     // Specify Test Files
@@ -19,8 +20,10 @@ exports.config = {
     // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
-   // specs: ['./tests/login.spec.js'],
-   specs: ['./tests/*.spec.js'],
+    specs: [
+        './tests/intro.spec.js'
+       // './tests/*.spec.js'
+    ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -91,9 +94,10 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-   //baseUrl: 'http://localhost',
-     baseUrl: 'http://127.0.0.1:5500/superHeroApp/',
-    //
+    baseUrl: 'http://127.0.0.1:8080',
+
+   // http://localhost
+    //http://127.0.0.1:8080
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
     //
